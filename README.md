@@ -1,4 +1,4 @@
-# ORING Sandbox Demo
+# ORING Oauth Demo
 
 The demo of Oring Oauth2.0 implict flow
 
@@ -29,4 +29,6 @@ npm start
 
 and then type http://127.0.0.1:3000 in your modern browser.
 
-you need save port 3000 for the demo since oauth flow needs redirect_URL with port 3000.
+you can use any of your own web server. Just server the whole public folder.
+
+you need to save port 3000 for the demo since oauth flow needs redirect_URL with http://127.0.0.1:3000.
