@@ -1,0 +1,22 @@
+{
+  "name": "oring_sandbox_demo",
+  "version": "1.0.0",
+  "description": "The demo of Oring Oauth2.0 implict flow",
+  "main": "",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ORingnet/oring_sandbox_demo.git"
+  },
+  "author": "Ernie Yang <https://github.com/ernieyang09>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ORingnet/oring_sandbox_demo/issues"
+  },
+  "homepage": "https://github.com/ORingnet/oring_sandbox_demo#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
