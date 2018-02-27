@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title></title>
+    <script>
+
+      $(function(){
+         var fragmentString = location.hash.substr(1);
+         var fragment = {};
+         var fragmentItemStrings = fragmentString.split('&');
+         for (var i in fragmentItemStrings) {
+          var fragmentItem = fragmentItemStrings[i].split('=');
+          if (fragmentItem.length !== 2) {
+            continue;
+          }
+          fragment[fragmentItem[0]] = fragmentItem[1];
+        }
+        if (fragment['access_token']) {
+          window.localStorage.setItem('demo_token',fragment['access_token']);  
+        }
+        window.close();
+      })
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
