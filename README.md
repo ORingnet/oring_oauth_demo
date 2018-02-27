@@ -8,7 +8,7 @@ The demo of Oring Oauth2.0 implict flow
 Clone the files
 
 ``
-https://github.com/ORingnet/oring_sandbox_demo.git
+https://github.com/ORingnet/oring_oauth_demo.git
 ``
 
 Install dependencies

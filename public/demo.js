@@ -1,62 +1,5 @@
 $(function(){
 
-  var options = (dataPoints) => ({
-    theme: "light2",
-    title: {
-      text: "Live Data"
-    },
-    axisY: {
-      includeZero: false,
-      suffix: " °C",
-      gridThickness: 0
-    },
-    data: [{
-      type: "line",
-      dataPoints,
-    }]
-  });
-
-  function draw(data) {
-    var color = Chart.helpers.color;
-    var ctx = document.getElementById("myChart");
-    var labels = data.map((d)=> new Date(d.recordAt));
-    var data = data.map((d)=> d.value);
-
-    var myLineChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: "pm25",
-            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
-            borderColor: window.chartColors.red,
-            fill: false,
-            data: data,
-          }
-        ]
-      },
-      options: {
-        responsive: false,
-        animation: false,
-        scales: {
-          xAxes: [{
-            type: "time",
-            time: {
-              format: 'MM/DD/YYYY HH:mm',
-              // round: 'day'
-              tooltipFormat: 'll HH:mm'
-            },
-            scaleLabel: {
-              display: true,
-              labelString: 'Date'
-            }
-          }, ],
-        }
-      }
-    });
-  }
-
   var api_root = 'https://api.iiot.oringnet.cloud';
   var demo_token = window.localStorage.getItem('demo_token');
   var thing_id = 'SycUzdGdM';
@@ -128,6 +71,48 @@ $(function(){
       r.json().then((d)=>{
         draw(d.data);
       })
+    });
+  }
+
+
+  function draw(data) {
+    var color = Chart.helpers.color;
+    var ctx = document.getElementById("myChart");
+    var labels = data.map((d)=> new Date(d.recordAt));
+    var data = data.map((d)=> d.value);
+
+    var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: "pm25",
+            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.red,
+            fill: false,
+            data: data,
+          }
+        ]
+      },
+      options: {
+        responsive: false,
+        animation: false,
+        scales: {
+          xAxes: [{
+            type: "time",
+            time: {
+              format: 'MM/DD/YYYY HH:mm',
+              // round: 'day'
+              tooltipFormat: 'll HH:mm'
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Date'
+            }
+          }, ],
+        }
+      }
     });
   }
 
