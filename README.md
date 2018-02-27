@@ -1,8 +1,13 @@
-# ORING Oauth Demo
+# ORING OAuth Demo
 
-The demo of Oring Oauth2.0 implict flow
+The demo of Oring OAuth2.0 implict flow
 
 !['demo_pic'](https://raw.githubusercontent.com/ORingnet/oring_oauth_demo/master/assets/demo.png)
+
+## Prerequisite
+
+1. node.js
+
 
 ## Quick start
 
@@ -13,9 +18,6 @@ https://github.com/ORingnet/oring_oauth_demo.git
 ``
 
 Install dependencies
-
-you'll need the enviroment with node.js.
-
 
 ``
 npm install
@@ -28,7 +30,7 @@ Start the server
 npm start
 ``
 
-and then type http://127.0.0.1:3000 in your modern browser.
+then type http://127.0.0.1:3000 in your modern browser.
 
 you can use any of your own web server. Just server the whole public folder.
 
