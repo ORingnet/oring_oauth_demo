@@ -2,6 +2,7 @@
 
 The demo of Oring Oauth2.0 implict flow
 
+!['demo_pic'](https://raw.githubusercontent.com/ORingnet/oring_oauth_demo/master/assets/demo.png)
 
 ## Quick start
 
